@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0B1120"/>
+      <stop offset="45%" stop-color="#4A1D6E"/>
+      <stop offset="100%" stop-color="#11294D"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#00D4FF"/>
+      <stop offset="100%" stop-color="#39FFA6"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="920" cy="160" r="220" fill="#00D4FF" opacity="0.14"/>
+  <circle cx="210" cy="500" r="240" fill="#39FFA6" opacity="0.1"/>
+  <text x="110" y="270" fill="#E9EEFF" font-size="88" font-family="Arial, sans-serif" font-weight="700">mask</text>
+  <text x="110" y="350" fill="#E9EEFF" font-size="56" font-family="Arial, sans-serif" font-weight="600">看见，即理解。</text>
+  <rect x="110" y="400" width="560" height="4" fill="url(#accent)"/>
+  <text x="110" y="470" fill="#B7C2E6" font-size="34" font-family="Arial, sans-serif">遮罩式 AI 翻译 · 端侧 OCR + VLM</text>
+</svg>

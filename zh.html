@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>mask - 看见，即理解 | 端侧 VLM 翻译工具</title>
+    <meta
+      name="description"
+      content="mask 是一款遮罩式 AI 翻译工具，通过端侧 OCR 与 VLM 理解屏幕内容，实现隐私优先、上下文感知的翻译体验。"
+    />
+    <meta name="theme-color" content="#0b1120" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="mask - 看见，即理解" />
+    <meta
+      property="og:description"
+      content="用遮罩翻译文字，用 VLM 理解世界。隐私计算，端侧运行。"
+    />
+    <meta property="og:url" content="https://mask-app.com/" />
+    <meta property="og:image" content="https://mask-app.com/assets/og-cover.svg" />
+    <link rel="canonical" href="https://mask-app.com/zh.html" />
+    <link rel="alternate" hreflang="zh-CN" href="https://mask-app.com/zh.html" />
+    <link rel="alternate" hreflang="en" href="https://mask-app.com/" />
+    <link rel="icon" href="/assets/mask_icon.svg" type="image/svg+xml" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Noto+Sans+SC:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "mask",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "iOS, Android, macOS",
+        "description": "mask 是一款遮罩式 AI 翻译工具，通过端侧 OCR 与 VLM 理解屏幕内容。",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="bg-glow" aria-hidden="true"></div>
+    <header class="site-header">
+      <a class="logo" href="#home">mask</a>
+      <div class="header-actions">
+        <nav aria-label="主导航">
+          <a href="#home">首页</a>
+          <a href="#features">功能</a>
+          <a href="#technology">技术</a>
+          <a class="nav-download" href="#download">下载</a>
+        </nav>
+        <div class="lang-switch" aria-label="语言切换">
+          <span>ZH</span>
+          <a href="/" hreflang="en">EN</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero reveal" id="home">
+        <div>
+          <p class="eyebrow">MASK OFFICIAL</p>
+          <h1>看见，即理解。</h1>
+          <p class="lead">用遮罩翻译文字，用 VLM 理解世界。隐私计算，端侧运行。</p>
+          <div class="cta-row">
+            <a class="btn primary" href="#download">立即下载</a>
+            <a class="btn ghost" href="#features">了解更多</a>
+          </div>
+          <p class="meta">适用多语言场景：漫画、游戏、PPT、手写笔记、图表截图</p>
+        </div>
+        <div class="hero-demo" aria-label="遮罩交互演示">
+          <div class="phone-shell">
+            <div class="panel original">
+              <h3>Original</h3>
+              <p class="jp">ドカン!!</p>
+              <p class="jp">このプロトタイプ、来週までに仕上げる。</p>
+            </div>
+            <div class="mask-zone" aria-hidden="true">
+              <span>遮罩区域</span>
+            </div>
+            <div class="panel translated">
+              <h3>mask Result</h3>
+              <p class="cn">轰！</p>
+              <p class="cn">这个原型，下周前必须完成。</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section reveal" id="features">
+        <h2>遮罩即所得，融合不破坏</h2>
+        <p class="section-subtitle">框选你关心的区域，翻译结果在原位融合显示，不打断内容阅读节奏。</p>
+        <div class="split-compare">
+          <article>
+            <h3>传统截图翻译</h3>
+            <ul>
+              <li>手动截图、上传、切换窗口</li>
+              <li>文本脱离原画面，语境丢失</li>
+              <li>重复操作多，连续阅读成本高</li>
+            </ul>
+          </article>
+          <article>
+            <h3>mask 遮罩翻译</h3>
+            <ul>
+              <li>直接框选对话框，一步触发</li>
+              <li>译文融合在原位置，视觉连续</li>
+              <li>面向连贯阅读，低打断</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="section reveal" id="technology">
+        <h2>核心技术亮点</h2>
+        <div class="grid-cards">
+          <article class="card">
+            <h3>视觉语言模型理解</h3>
+            <p>不止 OCR，能理解图像上下文，准确处理漫画拟声词、图表趋势与手写草图。</p>
+          </article>
+          <article class="card">
+            <h3>端侧隐私保护</h3>
+            <p>OCR 与主要视觉处理在设备本地完成，图片不上传，敏感信息不离开你的设备。</p>
+          </article>
+          <article class="card">
+            <h3>多模型自由切换</h3>
+            <p>支持 OpenAI、Gemini、Qwen、DeepSeek、Ollama 等路径，在速度与质量间自主选择。</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section reveal" id="vlm-compare">
+        <h2>不止于文字，更懂画面</h2>
+        <p class="section-subtitle">传统 OCR 只会“读字”，mask 的 VLM 能“读图”。</p>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>场景</th>
+                <th>传统翻译工具</th>
+                <th>mask（VLM 翻译）</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>手写笔记 + 草图</td>
+                <td>识别零散单词，翻译生硬</td>
+                <td>理解为原型思路，输出连贯语义</td>
+              </tr>
+              <tr>
+                <td>漫画拟声词</td>
+                <td>无法识别或乱码</td>
+                <td>识别“ドカン”并翻译为“轰！”</td>
+              </tr>
+              <tr>
+                <td>数据图表</td>
+                <td>只翻译标题</td>
+                <td>提炼趋势并给出可读总结</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="section reveal" id="privacy">
+        <h2>隐私，无需妥协</h2>
+        <div class="privacy-flow">
+          <div>图片输入</div>
+          <span>→</span>
+          <div>设备内 OCR / VLM</div>
+          <span>→</span>
+          <div>本地输出译文</div>
+        </div>
+        <p class="section-subtitle">本地优先处理链路，默认不上传图像到云端。</p>
+      </section>
+
+      <section class="section reveal" id="scenarios">
+        <h2>典型使用场景</h2>
+        <div class="scenarios-grid">
+          <article><h3>看懂生肉漫画</h3><p>框选对话框，瞬间翻译，保留原版画面风格。</p></article>
+          <article><h3>理解外文 PPT</h3><p>翻译标题与正文，同时辅助理解图表含义。</p></article>
+          <article><h3>辅助外文游戏</h3><p>实时理解 UI 与剧情文本，不打断沉浸体验。</p></article>
+          <article><h3>整理手写笔记</h3><p>识别潦草文字与草图语义，生成清晰译文。</p></article>
+        </div>
+      </section>
+
+      <section class="section quote reveal" id="reviews">
+        <h2>用户反馈（早期）</h2>
+        <blockquote>
+          “mask 改变了我看外文漫画的方式，它真的能理解拟声词。”
+          <cite>—— 早期测试者</cite>
+        </blockquote>
+      </section>
+
+      <section class="section download reveal" id="download">
+        <h2>立即体验 mask，让看见即理解成为现实</h2>
+        <div class="cta-row">
+          <a class="btn primary" href="#" aria-disabled="true">下载 for iOS（即将上线）</a>
+          <a class="btn ghost" href="#" aria-disabled="true">下载 for Android（即将上线）</a>
+        </div>
+        <form class="subscribe" action="#" method="post" onsubmit="return false;">
+          <label for="email">订阅更新</label>
+          <div>
+            <input id="email" type="email" placeholder="you@example.com" />
+            <button type="submit">提交</button>
+          </div>
+          <p>演示站点：表单已占位，可接入你常用邮件系统。</p>
+        </form>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>© 2026 mask. All rights reserved.</p>
+      <div>
+        <a href="/privacy.html">隐私政策</a>
+        <a href="https://x.com/" target="_blank" rel="noreferrer">X/Twitter</a>
+        <a href="mailto:hello@mask-app.com">联系</a>
+      </div>
+    </footer>
+
+    <script src="/main.js"></script>
+  </body>
+</html>

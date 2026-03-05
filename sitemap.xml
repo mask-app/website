@@ -5,14 +5,14 @@
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://mask-app.com/"/>
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://mask-app.com/zh.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://mask-app.com/zh"/>
   </url>
   <url>
-    <loc>https://mask-app.com/zh.html</loc>
+    <loc>https://mask-app.com/zh</loc>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://mask-app.com/"/>
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://mask-app.com/zh.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://mask-app.com/zh"/>
   </url>
   <url>
     <loc>https://mask-app.com/privacy.html</loc>

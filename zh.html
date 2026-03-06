@@ -8,7 +8,7 @@
       name="description"
       content="mask 是一款遮罩式 AI 翻译工具，通过端侧 OCR 与 VLM 理解屏幕内容，实现隐私优先、上下文感知的翻译体验。"
     />
-    <meta name="theme-color" content="#0b1120" />
+    <meta name="theme-color" content="#050b14" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="mask - 看见，即理解" />
     <meta
@@ -25,205 +25,247 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Noto+Sans+SC:wght@400;500;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;700;800&family=Noto+Sans+SC:wght@400;500;700;800&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="/styles.css" />
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "SoftwareApplication",
-        "name": "mask",
-        "applicationCategory": "UtilitiesApplication",
-        "operatingSystem": "iOS, Android, macOS",
-        "description": "mask 是一款遮罩式 AI 翻译工具，通过端侧 OCR 与 VLM 理解屏幕内容。",
-        "offers": {
-          "@type": "Offer",
-          "price": "0",
-          "priceCurrency": "USD"
-        }
-      }
-    </script>
   </head>
   <body>
-    <div class="bg-glow" aria-hidden="true"></div>
+    <!-- Ambient glowing backgrounds -->
+    <div class="ambient-bg" aria-hidden="true"></div>
+    <div class="grid-overlay" aria-hidden="true"></div>
+
     <header class="site-header">
-      <a class="logo" href="#home">mask</a>
+      <a class="brand" href="#home" style="font-family: 'Outfit', 'Noto Sans SC', sans-serif;">mask</a>
+      <nav class="nav-links" aria-label="主导航">
+        <a href="#features">核心特性</a>
+        <a href="#technology">技术架构</a>
+        <a href="#scenarios">使用场景</a>
+      </nav>
       <div class="header-actions">
-        <nav aria-label="主导航">
-          <a href="#home">首页</a>
-          <a href="#features">功能</a>
-          <a href="#technology">技术</a>
-          <a class="nav-download" href="#download">下载</a>
-        </nav>
-        <div class="lang-switch" aria-label="语言切换">
-          <span>ZH</span>
+        <div class="lang-toggle" aria-label="语言切换">
           <a href="/" hreflang="en">EN</a>
+          <span class="active">ZH</span>
         </div>
       </div>
     </header>
 
     <main>
       <section class="hero reveal" id="home">
-        <div>
-          <p class="eyebrow">MASK OFFICIAL</p>
-          <h1>看见，即理解。</h1>
-          <p class="lead">用遮罩翻译文字，用 VLM 理解世界。隐私计算，端侧运行。</p>
-          <div class="cta-row">
-            <a class="btn primary" href="#download">立即下载</a>
-            <a class="btn ghost" href="#features">了解更多</a>
+        <div class="container hero-content">
+          <div class="hero-text">
+            <span class="badge">✨ VLM 增强原生 OCR</span>
+            <h1 style="font-family: 'Noto Sans SC', sans-serif;">看见，<br>即理解。</h1>
+            <p class="subtitle">用遮罩翻译文字，用 VLM 理解世界。专为 macOS 打造，隐私计算与端侧运行的完美结合。</p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="#download">立即下载 macOS 版</a>
+              <a class="btn btn-secondary" href="#features">了解更多</a>
+            </div>
+            <p style="color: var(--text-muted); font-size: 0.9rem;">适用于外文游戏、漫画生肉、学术 PPT 与手写笔记。</p>
           </div>
-          <p class="meta">适用多语言场景：漫画、游戏、PPT、手写笔记、图表截图</p>
-        </div>
-        <div class="hero-demo" aria-label="遮罩交互演示">
-          <div class="phone-shell">
-            <div class="panel original">
-              <h3>Original</h3>
-              <p class="jp">ドカン!!</p>
-              <p class="jp">このプロトタイプ、来週までに仕上げる。</p>
-            </div>
-            <div class="mask-zone" aria-hidden="true">
-              <span>遮罩区域</span>
-            </div>
-            <div class="panel translated">
-              <h3>mask Result</h3>
-              <p class="cn">轰！</p>
-              <p class="cn">这个原型，下周前必须完成。</p>
+          
+          <div class="hero-demo-container">
+            <div class="demo-glass-pane" aria-label="遮罩交互演示">
+              <div class="demo-original">
+                <h3>原始画面</h3>
+                <p>ドカン!!</p>
+                <p>このプロトタイプ、来週までに仕上げる。</p>
+              </div>
+              <div class="demo-mask" aria-hidden="true">
+                <div class="scanner-line"></div>
+                <span>生成遮罩</span>
+              </div>
+              <div class="demo-translated">
+                <h3>mask 翻译结果</h3>
+                <p>轰！</p>
+                <p>这个原型，下周前必须完成。</p>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section class="section reveal" id="features">
-        <h2>遮罩即所得，融合不破坏</h2>
-        <p class="section-subtitle">框选你关心的区域，翻译结果在原位融合显示，不打断内容阅读节奏。</p>
-        <div class="split-compare">
-          <article>
-            <h3>传统截图翻译</h3>
-            <ul>
-              <li>手动截图、上传、切换窗口</li>
-              <li>文本脱离原画面，语境丢失</li>
-              <li>重复操作多，连续阅读成本高</li>
-            </ul>
-          </article>
-          <article>
-            <h3>mask 遮罩翻译</h3>
-            <ul>
-              <li>直接框选对话框，一步触发</li>
-              <li>译文融合在原位置，视觉连续</li>
-              <li>面向连贯阅读，低打断</li>
-            </ul>
-          </article>
+      <section class="reveal" id="features">
+        <div class="container">
+          <div class="section-header">
+            <h2>遮罩即所得，融合不破坏</h2>
+            <p>框选你关心的区域，翻译结果在原位完美融合显示，丝毫不打断您的内容阅读节奏。</p>
+          </div>
+          
+          <div class="compare-container">
+            <div class="compare-box">
+              <h3>📸 传统截图翻译</h3>
+              <ul>
+                <li>需要手动截图、等待上传、切换窗口查看结果</li>
+                <li>译文脱离原画面，语境大打折扣，容易误读</li>
+                <li>重复操作非常繁琐，严重破坏沉浸式阅读体验</li>
+              </ul>
+            </div>
+            <div class="compare-box pro">
+              <h3>✨ mask 无缝翻译</h3>
+              <ul>
+                <li>一键框选对话区域，译文即刻呈现</li>
+                <li>译文自动在原位置覆盖，视觉连续不割裂</li>
+                <li>为连续阅读与游戏玩家专门设计的无缝体验</li>
+              </ul>
+            </div>
+          </div>
         </div>
       </section>
 
-      <section class="section reveal" id="technology">
-        <h2>核心技术亮点</h2>
-        <div class="grid-cards">
-          <article class="card">
-            <h3>视觉语言模型理解</h3>
-            <p>不止 OCR，能理解图像上下文，准确处理漫画拟声词、图表趋势与手写草图。</p>
-          </article>
-          <article class="card">
-            <h3>端侧隐私保护</h3>
-            <p>OCR 与主要视觉处理在设备本地完成，图片不上传，敏感信息不离开你的设备。</p>
-          </article>
-          <article class="card">
-            <h3>多模型自由切换</h3>
-            <p>支持 OpenAI、Gemini、Qwen、DeepSeek、Ollama 等路径，在速度与质量间自主选择。</p>
-          </article>
+      <section class="reveal" id="technology">
+        <div class="container">
+          <div class="section-header">
+            <h2>领先的核心科技</h2>
+            <p>基于苹果系统级原生 API 与先进的大型视觉模型驱动。</p>
+          </div>
+          <div class="feature-cards">
+            <article class="glass-card">
+              <div class="card-icon">🧠</div>
+              <h3>VLM 场景感知理解</h3>
+              <p>不仅仅是文本 OCR。mask 能够利用 VLM（视觉语言模型）理解图像上下文，精确翻译漫画拟声词、图表趋势甚至手写草图。</p>
+            </article>
+            <article class="glass-card">
+              <div class="card-icon">🛡️</div>
+              <h3>绝对的端侧隐私保护</h3>
+              <p>采用 Apple Vision 框架，图像截取与文字提取全部在您的设备本地完成。除非主动启用云端模型，图像绝不离开您的 Mac。</p>
+            </article>
+            <article class="glass-card">
+              <div class="card-icon">⚡️</div>
+              <h3>随时切换引擎</h3>
+              <p>内置支持 OpenAI, Gemini, Qwen, DeepSeek。更可连接本地 Ollama 实例，真正实现零成本、完全离线的翻译体验。</p>
+            </article>
+          </div>
         </div>
       </section>
 
-      <section class="section reveal" id="vlm-compare">
-        <h2>不止于文字，更懂画面</h2>
-        <p class="section-subtitle">传统 OCR 只会“读字”，mask 的 VLM 能“读图”。</p>
-        <div class="table-wrap">
-          <table>
+      <section class="reveal" id="vlm-compare">
+        <div class="container">
+          <div class="section-header">
+            <h2>不止于文字，更懂画面</h2>
+            <p>传统 OCR 只会生硬地提取字母。mask 的 VLM 能够真正“看懂”眼前的一切。</p>
+          </div>
+          <table class="glass-table">
             <thead>
               <tr>
-                <th>场景</th>
-                <th>传统翻译工具</th>
-                <th>mask（VLM 翻译）</th>
+                <th>场景类型</th>
+                <th>传统 OCR 翻译工具</th>
+                <th>mask（VLM 增强翻译）</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td>手写笔记 + 草图</td>
-                <td>识别零散单词，翻译生硬</td>
-                <td>理解为原型思路，输出连贯语义</td>
+                <td>带有草图的手写会议笔记</td>
+                <td>只能识别零散的个别单词，翻译结果如乱码般生硬</td>
+                <td>理解为您在绘制“应用架构图”，给出连贯的设计思路翻译</td>
               </tr>
               <tr>
-                <td>漫画拟声词</td>
-                <td>无法识别或乱码</td>
-                <td>识别“ドカン”并翻译为“轰！”</td>
+                <td>日漫中夸张的艺术拟声词</td>
+                <td>完全无法识别特殊字体结构，或提取错误导致崩溃</td>
+                <td>根据画面动作判断出“ドカン”，并智能翻译为“轰隆！”</td>
               </tr>
               <tr>
-                <td>数据图表</td>
-                <td>只翻译标题</td>
-                <td>提炼趋势并给出可读总结</td>
+                <td>满是数据的学术图表</td>
+                <td>割裂地翻译坐标轴上的几个短词，完全脱离上下文</td>
+                <td>自动提炼数据的变化趋势，并用极具可读性的自然语言为您总结</td>
               </tr>
             </tbody>
           </table>
         </div>
       </section>
 
-      <section class="section reveal" id="privacy">
-        <h2>隐私，无需妥协</h2>
-        <div class="privacy-flow">
-          <div>图片输入</div>
-          <span>→</span>
-          <div>设备内 OCR / VLM</div>
-          <span>→</span>
-          <div>本地输出译文</div>
-        </div>
-        <p class="section-subtitle">本地优先处理链路，默认不上传图像到云端。</p>
-      </section>
-
-      <section class="section reveal" id="scenarios">
-        <h2>典型使用场景</h2>
-        <div class="scenarios-grid">
-          <article><h3>看懂生肉漫画</h3><p>框选对话框，瞬间翻译，保留原版画面风格。</p></article>
-          <article><h3>理解外文 PPT</h3><p>翻译标题与正文，同时辅助理解图表含义。</p></article>
-          <article><h3>辅助外文游戏</h3><p>实时理解 UI 与剧情文本，不打断沉浸体验。</p></article>
-          <article><h3>整理手写笔记</h3><p>识别潦草文字与草图语义，生成清晰译文。</p></article>
-        </div>
-      </section>
-
-      <section class="section quote reveal" id="reviews">
-        <h2>用户反馈（早期）</h2>
-        <blockquote>
-          “mask 改变了我看外文漫画的方式，它真的能理解拟声词。”
-          <cite>—— 早期测试者</cite>
-        </blockquote>
-      </section>
-
-      <section class="section download reveal" id="download">
-        <h2>立即体验 mask，让看见即理解成为现实</h2>
-        <div class="cta-row">
-          <a class="btn primary" href="#" aria-disabled="true">下载 for iOS（即将上线）</a>
-          <a class="btn ghost" href="#" aria-disabled="true">下载 for Android（即将上线）</a>
-        </div>
-        <form class="subscribe" action="#" method="post" onsubmit="return false;">
-          <label for="email">订阅更新</label>
-          <div>
-            <input id="email" type="email" placeholder="you@example.com" />
-            <button type="submit">提交</button>
+      <section class="reveal" id="scenarios">
+        <div class="container">
+          <div class="section-header">
+            <h2>适配您的任何主要工作流</h2>
           </div>
-          <p>演示站点：表单已占位，可接入你常用邮件系统。</p>
-        </form>
+          <div class="scenario-grid">
+            <article class="scenario-card">
+              <h3>🎮 畅玩外文生肉游戏</h3>
+              <p>实时翻译游戏系统界面、物品描述与核心剧情对话，无需 Alt-Tab 切换，享受极致沉浸感。</p>
+            </article>
+            <article class="scenario-card">
+              <h3>📖 高效啃食原版漫画</h3>
+              <p>精准框选漫画对话框。保留原汁原味绝美画风的同时，用母语进行流畅顺滑的剧情补完。</p>
+            </article>
+            <article class="scenario-card">
+              <h3>📊 攻克海外学术材料</h3>
+              <p>轻松应对外文 PPT 与专业文献，不漏过任何繁杂的配图注释，提升您的研究效率。</p>
+            </article>
+            <article class="scenario-card">
+              <h3>✍️ 梳理手绘草图</h3>
+              <p>快速将海外团队成员随手画的长篇大论和粗略排版图数字翻译为您的母语。</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="reveal" id="privacy">
+        <div class="container">
+           <div class="section-header" style="margin-bottom: 2rem;">
+            <h2>您的隐私，绝不妥协</h2>
+            <p>您屏幕上的内容是您的核心机密。我们誓死捍卫这一点。</p>
+          </div>
+          <div class="privacy-flow">
+            <div class="flow-step">
+              <div class="flow-icon">💻</div>
+              <h4>系统级截图</h4>
+              <p style="font-size: 0.85rem; color: var(--text-muted);">调用原生 SCKit 高效截取</p>
+            </div>
+            <div class="flow-arrow">→</div>
+            <div class="flow-step">
+              <div class="flow-icon">🔒</div>
+              <h4>本地神经引擎</h4>
+              <p style="font-size: 0.85rem; color: var(--text-muted);">100% 离线完成文字特征提取</p>
+            </div>
+            <div class="flow-arrow">→</div>
+            <div class="flow-step">
+              <div class="flow-icon">✨</div>
+              <h4>悬浮层反馈</h4>
+              <p style="font-size: 0.85rem; color: var(--text-muted);">贴合物体表面生成渲染效果</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="cta-section reveal" id="download">
+        <div class="container">
+          <h2>准备好看见并理解世界了吗？</h2>
+          <p style="color: var(--text-muted); margin: 1rem 0 2rem; font-size: 1.1rem;">今天就在您的 Mac 上体验毫无违和感的环境级翻译魔法。</p>
+          <a class="btn btn-primary" href="#" style="padding: 1rem 3rem; font-size: 1.1rem;">免费下载针对 macOS 的 mask</a>
+          <br><br>
+          <span style="color: var(--text-muted); font-size: 0.9rem;">最低系统要求：macOS 14.0 Sonoma 及以后的版本。</span>
+          
+          <form class="subscribe-form" action="#" method="post" onsubmit="return false;">
+            <input class="subscribe-input" id="email" type="email" placeholder="在此输入您的邮箱，订阅产品最新迭代通知..." />
+            <button class="btn btn-secondary" type="submit">获取通知</button>
+          </form>
+        </div>
       </section>
     </main>
 
     <footer class="site-footer">
-      <p>© 2026 mask. All rights reserved.</p>
-      <div>
-        <a href="/privacy.html">隐私政策</a>
-        <a href="https://x.com/" target="_blank" rel="noreferrer">X/Twitter</a>
-        <a href="mailto:hello@mask-app.com">联系</a>
+      <div class="container footer-content">
+        <div style="color: var(--text-muted); font-size: 0.9rem;">© 2026 mask 应用程序，保留所有相关权利。</div>
+        <div class="footer-links">
+          <a href="/privacy.html">隐私权协议</a>
+          <a href="https://x.com/" target="_blank" rel="noreferrer">官方 X / Twitter</a>
+          <a href="mailto:hello@mask-app.com">联系我们</a>
+        </div>
       </div>
     </footer>
 
-    <script src="/main.js"></script>
+    <script>
+      // 增加滚动的淡入淡出动效监控
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if(entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      }, { threshold: 0.1 });
+
+      document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
   </body>
 </html>

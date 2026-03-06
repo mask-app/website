@@ -8,7 +8,7 @@
       name="description"
       content="mask is an AI translation tool with mask-based interaction, on-device OCR, and VLM understanding for context-aware private translation."
     />
-    <meta name="theme-color" content="#0b1120" />
+    <meta name="theme-color" content="#050b14" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="mask - See and Understand" />
     <meta
@@ -25,190 +25,247 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Noto+Sans+SC:wght@400;500;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;700;800&family=Space+Grotesk:wght@500;700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="/styles.css" />
   </head>
   <body>
-    <div class="bg-glow" aria-hidden="true"></div>
+    <!-- Ambient glowing backgrounds -->
+    <div class="ambient-bg" aria-hidden="true"></div>
+    <div class="grid-overlay" aria-hidden="true"></div>
+
     <header class="site-header">
-      <a class="logo" href="#home">mask</a>
+      <a class="brand" href="#home">mask</a>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="#features">Features</a>
+        <a href="#technology">Technology</a>
+        <a href="#scenarios">Scenarios</a>
+      </nav>
       <div class="header-actions">
-        <nav aria-label="Main navigation">
-          <a href="#home">Home</a>
-          <a href="#features">Features</a>
-          <a href="#technology">Technology</a>
-          <a class="nav-download" href="#download">Download</a>
-        </nav>
-        <div class="lang-switch" aria-label="Language selector">
+        <div class="lang-toggle" aria-label="Language selector">
+          <span class="active">EN</span>
           <a href="/zh" hreflang="zh-CN">ZH</a>
-          <span>EN</span>
         </div>
       </div>
     </header>
 
     <main>
       <section class="hero reveal" id="home">
-        <div>
-          <p class="eyebrow">MASK OFFICIAL</p>
-          <h1>See and Understand.</h1>
-          <p class="lead">Translate text with masks and understand visuals with VLM. Privacy-first and on-device.</p>
-          <div class="cta-row">
-            <a class="btn primary" href="#download">Download Now</a>
-            <a class="btn ghost" href="#features">Learn More</a>
+        <div class="container hero-content">
+          <div class="hero-text">
+            <span class="badge">✨ VLM Powered Native OCR</span>
+            <h1>See and <br>Understand.</h1>
+            <p class="subtitle">Translate text with masks and understand visuals with VLM. Privacy-first, on-device magic for macOS.</p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="#download">Download for Mac</a>
+              <a class="btn btn-secondary" href="#features">Explore Features</a>
+            </div>
+            <p style="color: var(--text-muted); font-size: 0.9rem;">Perfect for Comics, Games, Slides, & Hand-drawn notes.</p>
           </div>
-          <p class="meta">Built for multilingual reading: comics, games, slides, handwritten notes, and charts.</p>
-        </div>
-        <div class="hero-demo" aria-label="Mask interaction demo">
-          <div class="phone-shell">
-            <div class="panel original">
-              <h3>Original</h3>
-              <p class="jp">ドカン!!</p>
-              <p class="jp">このプロトタイプ、来週までに仕上げる。</p>
-            </div>
-            <div class="mask-zone" aria-hidden="true">
-              <span>Mask Area</span>
-            </div>
-            <div class="panel translated">
-              <h3>mask Result</h3>
-              <p class="cn">Boom!</p>
-              <p class="cn">This prototype must be finished by next week.</p>
+          
+          <div class="hero-demo-container">
+            <div class="demo-glass-pane" aria-label="Mask interaction demo">
+              <div class="demo-original">
+                <h3>Original Source</h3>
+                <p>ドカン!!</p>
+                <p>このプロトタイプ、来週までに仕上げる。</p>
+              </div>
+              <div class="demo-mask" aria-hidden="true">
+                <div class="scanner-line"></div>
+                <span>Mask Processing</span>
+              </div>
+              <div class="demo-translated">
+                <h3>mask Result</h3>
+                <p>Boom!</p>
+                <p>This prototype must be finished by next week.</p>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section class="section reveal" id="features">
-        <h2>What You Mask Is What You Get</h2>
-        <p class="section-subtitle">Select only what matters. Translation appears in place without breaking visual continuity.</p>
-        <div class="split-compare">
-          <article>
-            <h3>Traditional Screenshot Translation</h3>
-            <ul>
-              <li>Capture, upload, then switch windows</li>
-              <li>Text is detached from original context</li>
-              <li>Repeated actions slow down reading flow</li>
-            </ul>
-          </article>
-          <article>
-            <h3>mask Translation</h3>
-            <ul>
-              <li>Select a dialog area and translate in one step</li>
-              <li>Translation is blended back into the scene</li>
-              <li>Designed for uninterrupted reading</li>
-            </ul>
-          </article>
+      <section class="reveal" id="features">
+        <div class="container">
+          <div class="section-header">
+            <h2>What You Mask Is What You Get</h2>
+            <p>Select only what matters. Translation overlays naturally in place without breaking your visual continuity.</p>
+          </div>
+          
+          <div class="compare-container">
+            <div class="compare-box">
+              <h3>📸 Traditional Screenshot tools</h3>
+              <ul>
+                <li>Capture area, wait for upload, switch app context</li>
+                <li>Translated text is detached from original visual context</li>
+                <li>Repetitive manual actions disrupt reading flow</li>
+              </ul>
+            </div>
+            <div class="compare-box pro">
+              <h3>✨ mask Ambient Translation</h3>
+              <ul>
+                <li>Simply select the dialog area, get instant in-place results</li>
+                <li>Translation elegantly blends back into the game or comic scene</li>
+                <li>Built for uninterrupted, continuous reading</li>
+              </ul>
+            </div>
+          </div>
         </div>
       </section>
 
-      <section class="section reveal" id="technology">
-        <h2>Core Technology Highlights</h2>
-        <div class="grid-cards">
-          <article class="card">
-            <h3>VLM Scene Understanding</h3>
-            <p>Beyond OCR, mask understands visual context in comics, charts, and handwritten notes.</p>
-          </article>
-          <article class="card">
-            <h3>On-device Privacy</h3>
-            <p>OCR and key visual processing run locally by default, so your images stay on your device.</p>
-          </article>
-          <article class="card">
-            <h3>Flexible Model Routing</h3>
-            <p>Switch across OpenAI, Gemini, Qwen, DeepSeek, and Ollama based on speed and quality needs.</p>
-          </article>
+      <section class="reveal" id="technology">
+        <div class="container">
+          <div class="section-header">
+            <h2>Core Technology</h2>
+            <p>Powered by local native APIs and advanced visual models.</p>
+          </div>
+          <div class="feature-cards">
+            <article class="glass-card">
+              <div class="card-icon">🧠</div>
+              <h3>VLM Scene Intelligence</h3>
+              <p>Moving beyond basic OCR, mask leverages VLM to understand the context of comics, UI elements, charts, and rough sketches.</p>
+            </article>
+            <article class="glass-card">
+              <div class="card-icon">🛡️</div>
+              <h3>On-device Privacy First</h3>
+              <p>Apple native Vision OCR handles extraction locally. Images do not leave your device unless you explicitly route to cloud VLMs.</p>
+            </article>
+            <article class="glass-card">
+              <div class="card-icon">⚡️</div>
+              <h3>Any Provider, Anytime</h3>
+              <p>Seamlessly switch between OpenAI, Gemini, Qwen, DeepSeek, or run entirely offline with Ollama based on your needs.</p>
+            </article>
+          </div>
         </div>
       </section>
 
-      <section class="section reveal" id="vlm-compare">
-        <h2>Beyond Text, Better Visual Understanding</h2>
-        <p class="section-subtitle">Traditional OCR reads text only. mask VLM reads text with scene context.</p>
-        <div class="table-wrap">
-          <table>
+      <section class="reveal" id="vlm-compare">
+        <div class="container">
+          <div class="section-header">
+            <h2>Beyond Text, Better Scene Understanding</h2>
+            <p>Traditional OCR just reads characters. mask's VLM actually understands the scene in front of it.</p>
+          </div>
+          <table class="glass-table">
             <thead>
               <tr>
                 <th>Scenario</th>
-                <th>Traditional Tool</th>
-                <th>mask (VLM)</th>
+                <th>Standard OCR</th>
+                <th>mask with VLM</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td>Handwritten notes + sketch</td>
-                <td>Fragmented words, awkward output</td>
-                <td>Understands intent and generates coherent translation</td>
+                <td>Whiteboard notes with sketches</td>
+                <td>Fragmented words, garbage characters</td>
+                <td>Recognizes context as "App architecture diagram"</td>
               </tr>
               <tr>
-                <td>Comic sound effects</td>
-                <td>Misses text or outputs garbled content</td>
-                <td>Interprets “ドカン” and translates to “Boom!”</td>
+                <td>Stylized Comic Sound Effects</td>
+                <td>Fails to detect stylized fonts</td>
+                <td>Interprets visual “ドカン” and outputs “Boom!”</td>
               </tr>
               <tr>
-                <td>Data charts</td>
-                <td>Translates title only</td>
-                <td>Summarizes chart trends in readable language</td>
+                <td>Data charts and graphs</td>
+                <td>Translates axis labels in isolation</td>
+                <td>Summarizes the chart trend automatically</td>
               </tr>
             </tbody>
           </table>
         </div>
       </section>
 
-      <section class="section reveal" id="privacy">
-        <h2>Privacy Without Compromise</h2>
-        <div class="privacy-flow">
-          <div>Image Input</div>
-          <span>→</span>
-          <div>On-device OCR / VLM</div>
-          <span>→</span>
-          <div>Local Translation Output</div>
-        </div>
-        <p class="section-subtitle">Local-first processing pipeline with no image upload by default.</p>
-      </section>
-
-      <section class="section reveal" id="scenarios">
-        <h2>Use Cases</h2>
-        <div class="scenarios-grid">
-          <article><h3>Read Raw Comics</h3><p>Translate dialog areas instantly while preserving original style.</p></article>
-          <article><h3>Understand Foreign Slides</h3><p>Translate text and capture chart meaning with context.</p></article>
-          <article><h3>Support Foreign-language Games</h3><p>Understand UI and story text in real time without context switching.</p></article>
-          <article><h3>Organize Handwritten Notes</h3><p>Interpret rough handwriting and sketches into readable output.</p></article>
-        </div>
-      </section>
-
-      <section class="section quote reveal" id="reviews">
-        <h2>Early Feedback</h2>
-        <blockquote>
-          “mask changed how I read foreign comics. It really understands sound effects.”
-          <cite>- Early tester</cite>
-        </blockquote>
-      </section>
-
-      <section class="section download reveal" id="download">
-        <h2>Try mask now and turn what you see into what you understand</h2>
-        <div class="cta-row">
-          <a class="btn primary" href="#" aria-disabled="true">Download for iOS (Coming Soon)</a>
-          <a class="btn ghost" href="#" aria-disabled="true">Download for Android (Coming Soon)</a>
-        </div>
-        <form class="subscribe" action="#" method="post" onsubmit="return false;">
-          <label for="email">Subscribe for Updates</label>
-          <div>
-            <input id="email" type="email" placeholder="you@example.com" />
-            <button type="submit">Submit</button>
+      <section class="reveal" id="scenarios">
+        <div class="container">
+          <div class="section-header">
+            <h2>Perfect for Any Workflow</h2>
           </div>
-          <p>Demo placeholder form. You can connect it to your own email system later.</p>
-        </form>
+          <div class="scenario-grid">
+            <article class="scenario-card">
+              <h3>🎮 Un-localized Games</h3>
+              <p>Translate UI menus and story dialogue on-the-fly without alt-tabbing breaking your immersion.</p>
+            </article>
+            <article class="scenario-card">
+              <h3>📖 Raw Manga & Comics</h3>
+              <p>Mask just the speech bubbles. Keep the beautiful art untouched while instantly reading the dialogue.</p>
+            </article>
+            <article class="scenario-card">
+              <h3>📊 Academic Presentations</h3>
+              <p>Translate dense foreign slides while retaining the understanding of complex diagrams and flowcharts.</p>
+            </article>
+            <article class="scenario-card">
+              <h3>✍️ Hand-written Notes</h3>
+              <p>Digitize and translate rough handwritten concepts and diagrams shared by international colleagues.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="reveal" id="privacy">
+        <div class="container">
+           <div class="section-header" style="margin-bottom: 2rem;">
+            <h2>Privacy Without Compromise</h2>
+            <p>Your screen is your business. We keep it that way.</p>
+          </div>
+          <div class="privacy-flow">
+            <div class="flow-step">
+              <div class="flow-icon">💻</div>
+              <h4>Screen Capture</h4>
+              <p style="font-size: 0.85rem; color: var(--text-muted);">Native SCKit API</p>
+            </div>
+            <div class="flow-arrow">→</div>
+            <div class="flow-step">
+              <div class="flow-icon">🔒</div>
+              <h4>Local Apple Vision</h4>
+              <p style="font-size: 0.85rem; color: var(--text-muted);">100% On-device OCR</p>
+            </div>
+            <div class="flow-arrow">→</div>
+            <div class="flow-step">
+              <div class="flow-icon">✨</div>
+              <h4>In-place Overlay</h4>
+              <p style="font-size: 0.85rem; color: var(--text-muted);">Rendered instantly</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="cta-section reveal" id="download">
+        <div class="container">
+          <h2>Ready to See and Understand?</h2>
+          <p style="color: var(--text-muted); margin: 1rem 0 2rem; font-size: 1.1rem;">Experience the magic of ambient translation on your Mac today.</p>
+          <a class="btn btn-primary" href="#" style="padding: 1rem 3rem; font-size: 1.1rem;">Download mask for macOS</a>
+          <br><br>
+          <span style="color: var(--text-muted); font-size: 0.9rem;">Requires macOS 14.0 or later.</span>
+          
+          <form class="subscribe-form" action="#" method="post" onsubmit="return false;">
+            <input class="subscribe-input" id="email" type="email" placeholder="Get email updates on new features..." />
+            <button class="btn btn-secondary" type="submit">Subscribe</button>
+          </form>
+        </div>
       </section>
     </main>
 
     <footer class="site-footer">
-      <p>© 2026 mask. All rights reserved.</p>
-      <div>
-        <a href="/privacy-en.html">Privacy</a>
-        <a href="https://x.com/" target="_blank" rel="noreferrer">X/Twitter</a>
-        <a href="mailto:hello@mask-app.com">Contact</a>
+      <div class="container footer-content">
+        <div style="color: var(--text-muted); font-size: 0.9rem;">© 2026 mask app. All rights reserved.</div>
+        <div class="footer-links">
+          <a href="/privacy-en.html">Privacy Policy</a>
+          <a href="https://x.com/" target="_blank" rel="noreferrer">Twitter / X</a>
+          <a href="mailto:hello@mask-app.com">Contact</a>
+        </div>
       </div>
     </footer>
 
-    <script src="/main.js"></script>
+    <script>
+      // Simple observer for reveal animation
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if(entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      }, { threshold: 0.1 });
+
+      document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
   </body>
 </html>

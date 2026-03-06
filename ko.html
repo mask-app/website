@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>mask - 보고, 이해하다 | 온디바이스 VLM 번역 도구</title>
+    <meta
+      name="description"
+      content="mask는 마스크 기반 상호작용, 온디바이스 OCR 및 VLM(시각 언어 모델)을 갖춘 프라이버시 우선 AI 번역 도구입니다."
+    />
+    <meta name="theme-color" content="#050b14" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="mask - 보고, 이해하다" />
+    <meta
+      property="og:description"
+      content="마스크로 텍스트를 번역하고 VLM으로 화면을 이해합니다. 프라이버시를 최우선으로 하는 온디바이스 처리."
+    />
+    <meta property="og:url" content="https://mask-app.com/ko" />
+    <meta property="og:image" content="https://mask-app.com/assets/og-cover.svg" />
+    <link rel="canonical" href="https://mask-app.com/ko" />
+    <link rel="alternate" hreflang="ko" href="https://mask-app.com/ko" />
+    <link rel="alternate" hreflang="en" href="https://mask-app.com/" />
+    <link rel="alternate" hreflang="zh-CN" href="https://mask-app.com/zh" />
+    <link rel="alternate" hreflang="ja" href="https://mask-app.com/ja" />
+    <link rel="icon" href="/assets/mask_icon.svg" type="image/svg+xml" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;700;800&family=Noto+Sans+KR:wght@400;500;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <!-- Ambient glowing backgrounds -->
+    <div class="ambient-bg" aria-hidden="true"></div>
+    <div class="grid-overlay" aria-hidden="true"></div>
+
+    <header class="site-header">
+      <a class="brand" href="#home" style="font-family: 'Outfit', 'Noto Sans KR', sans-serif;">mask</a>
+      <nav class="nav-links" aria-label="메인 내비게이션">
+        <a href="#features">주요 기능</a>
+        <a href="#technology">기술</a>
+        <a href="#scenarios">사용 시나리오</a>
+      </nav>
+      <div class="header-actions">
+        <div class="lang-toggle" aria-label="언어 선택">
+          <a href="/" hreflang="en">EN</a>
+          <a href="/zh" hreflang="zh-CN">ZH</a>
+          <a href="/ja" hreflang="ja">JA</a>
+          <span class="active">KO</span>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero reveal" id="home">
+        <div class="container hero-content">
+          <div class="hero-text">
+            <span class="badge">✨ VLM 강화 네이티브 OCR</span>
+            <h1 style="font-family: 'Noto Sans KR', sans-serif;">보고,<br>이해하다.</h1>
+            <p class="subtitle">마스크로 텍스트를 번역하고 VLM으로 세상을 이해합니다. macOS를 위해 최적화된 프라이버시 중심의 온디바이스 마법.</p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="#download">macOS 버전 다운로드</a>
+              <a class="btn btn-secondary" href="#features">기능 살펴보기</a>
+            </div>
+            <p style="color: var(--text-muted); font-size: 0.9rem;">게임, 일본 만화, 프레젠테이션 자료, 손글씨 노트에 완벽합니다.</p>
+          </div>
+          
+          <div class="hero-demo-container">
+            <div class="demo-glass-pane" aria-label="마스크 상호작용 데모">
+              <div class="demo-original">
+                <h3>원본 화면</h3>
+                <p>ドカン!!</p>
+                <p>このプロトタイプ、来週までに仕上げる。</p>
+              </div>
+              <div class="demo-mask" aria-hidden="true">
+                <div class="scanner-line"></div>
+                <span>마스크 처리 중</span>
+              </div>
+              <div class="demo-translated">
+                <h3>mask 번역 결과</h3>
+                <p>Boom!</p>
+                <p>This prototype must be finished by next week.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="reveal" id="features">
+        <div class="container">
+          <div class="section-header">
+            <h2>마스크한 부분만, 있는 그대로 번역</h2>
+            <p>필요한 부분만 선택하세요. 원본 레이아웃을 해치지 않고 번역이 자연스럽게 오버레이됩니다.</p>
+          </div>
+          
+          <div class="compare-container">
+            <div class="compare-box">
+              <h3>📸 기존 스크린샷 번역</h3>
+              <ul>
+                <li>캡처 후 업로드 대기, 그리고 앱 테스킹 전환 필요</li>
+                <li>번역된 텍스트가 원래 화면의 문맥과 분리됨</li>
+                <li>반복적인 수동 작업으로 독서나 게임의 몰입도 저하</li>
+              </ul>
+            </div>
+            <div class="compare-box pro">
+              <h3>✨ mask의 앰비언트 번역</h3>
+              <ul>
+                <li>대화 상자를 선택하기만 하면 즉시 제자리에서 번역 결과 표시</li>
+                <li>번역이 게임이나 만화의 씬에 아름답게 스며듦</li>
+                <li>끊김 없는 연속적인 읽기 경험을 위해 설계됨</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="reveal" id="technology">
+        <div class="container">
+          <div class="section-header">
+            <h2>핵심 기술</h2>
+            <p>Apple의 네이티브 API와 최신 시각 언어 모델 엔진 기반.</p>
+          </div>
+          <div class="feature-cards">
+            <article class="glass-card">
+              <div class="card-icon">🧠</div>
+              <h3>VLM 상황 이해</h3>
+              <p>단순한 텍스트 OCR을 넘어, mask는 VLM(시각 언어 모델)을 활용하여 만화 배경, UI 요소, 차트 및 스케치의 문맥을 이해합니다.</p>
+            </article>
+            <article class="glass-card">
+              <div class="card-icon">🛡️</div>
+              <h3>강력한 온디바이스 프라이버시</h3>
+              <p>Apple Vision 프레임워크를 사용하여 이미지 캡처 및 텍스트 추출이 모두 로컬에서 처리됩니다. 클라우드 VLM을 의도적으로 선택하지 않는 한, 이미지가 Mac 외부로 전송되지 않습니다.</p>
+            </article>
+            <article class="glass-card">
+              <div class="card-icon">⚡️</div>
+              <h3>자유로운 AI 모델 선택</h3>
+              <p>필요에 따라 OpenAI, Gemini, Qwen, DeepSeek 사이를 매끄럽게 전환하십시오. 단일 오프라인 경험을 위해 Ollama를 연결할 수도 있습니다.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="reveal" id="vlm-compare">
+        <div class="container">
+          <div class="section-header">
+            <h2>텍스트 너머, 씬 전체를 이해하다</h2>
+            <p>기존 OCR은 단순히 글자만 읽지만, mask의 VLM은 '보고 있는 것'을 진정으로 이해합니다.</p>
+          </div>
+          <table class="glass-table">
+            <thead>
+              <tr>
+                <th>시나리오</th>
+                <th>기존 OCR 번역</th>
+                <th>mask (VLM 강화 번역)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>스케치가 포함된 화이트보드 회의 노트</td>
+                <td>단어들이 파편화되어 인식되며 알아보기 힘든 번역 출력</td>
+                <td>"앱 아키텍처 다이어그램"이라는 문맥을 이해하고 일관된 흐름으로 번역</td>
+              </tr>
+              <tr>
+                <td>만화의 특수한 폰트로 된 효과음</td>
+                <td>문자로 인식하지 못해 오류 발생 또는 텍스트 깨짐</td>
+                <td>시각적 형태로 "ドカン"을 유추하고 문맥에 맞게 "쾅!"으로 번역</td>
+              </tr>
+              <tr>
+                <td>데이터가 밀집된 학술 차트.</td>
+                <td>축 레이블만 분리되어 개별적으로 번역됨.</td>
+                <td>그래프의 추세 및 주요 변화를 자동으로 요약하여 자연스러운 언어로 설명</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="reveal" id="scenarios">
+        <div class="container">
+          <div class="section-header">
+            <h2>모든 종류의 워크플로우에 완벽 적응</h2>
+          </div>
+          <div class="scenario-grid">
+            <article class="scenario-card">
+              <h3>🎮 미번역 게임 플레이</h3>
+              <p>Alt-Tab 전환으로 몰입을 깨지 않고, UI 메뉴와 스토리 대화를 실시간으로 번역하여 즐기세요.</p>
+            </article>
+            <article class="scenario-card">
+              <h3>📖 외국어 만화 및 웹툰</h3>
+              <p>말풍선 영역만 마스크하세요. 아름다운 원본 아트워크를 그대로 유지하면서 모국어로 대사를 읽을 수 있습니다.</p>
+            </article>
+            <article class="scenario-card">
+              <h3>📊 학술 프레젠테이션 분석</h3>
+              <p>복잡한 다이어그램 및 순서도의 의미를 잃지 않고 빼곡한 외국어 슬라이드를 효율적으로 파악하세요.</p>
+            </article>
+            <article class="scenario-card">
+              <h3>✍️ 손글씨 노트 디지털화</h3>
+              <p>해외 팀원이 작성한 다듬어지지 않은 다이어그램이나 메모를 여러분의 언어로 신속하게 번역합니다.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="reveal" id="privacy">
+        <div class="container">
+           <div class="section-header" style="margin-bottom: 2rem;">
+            <h2>타협 없는 프라이버시</h2>
+            <p>화면 내용은 여러분의 비즈니스입니다. 철저하게 보호합니다.</p>
+          </div>
+          <div class="privacy-flow">
+            <div class="flow-step">
+              <div class="flow-icon">💻</div>
+              <h4>시스템 레벨 화면 캡처</h4>
+              <p style="font-size: 0.85rem; color: var(--text-muted);">네이티브 SCKit API 활용</p>
+            </div>
+            <div class="flow-arrow">→</div>
+            <div class="flow-step">
+              <div class="flow-icon">🔒</div>
+              <h4>로컬 Apple Vision 처리</h4>
+              <p style="font-size: 0.85rem; color: var(--text-muted);">100% 온디바이스 OCR로 텍스트 추출</p>
+            </div>
+            <div class="flow-arrow">→</div>
+            <div class="flow-step">
+              <div class="flow-icon">✨</div>
+              <h4>인플레이스 오버레이</h4>
+              <p style="font-size: 0.85rem; color: var(--text-muted);">같은 위치에 실시간 렌더링</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="cta-section reveal" id="download">
+        <div class="container">
+          <h2>놀라운 세상을 직접 확인해 볼 준비가 되셨나요?</h2>
+          <p style="color: var(--text-muted); margin: 1rem 0 2rem; font-size: 1.1rem;">여러분의 Mac에서 위화감 없는 앰비언트 번역의 마법을 직접 경험해 보세요.</p>
+          <a class="btn btn-primary" href="#" style="padding: 1rem 3rem; font-size: 1.1rem;">macOS용 mask 무료 다운로드</a>
+          <br><br>
+          <span style="color: var(--text-muted); font-size: 0.9rem;">최소 시스템 요구 사항: macOS 14.0 이상.</span>
+          
+          <form class="subscribe-form" action="#" method="post" onsubmit="return false;">
+            <input class="subscribe-input" id="email" type="email" placeholder="새로운 기능에 대한 업데이트 소식 받기..." />
+            <button class="btn btn-secondary" type="submit">구독하기</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-content">
+        <div style="color: var(--text-muted); font-size: 0.9rem;">© 2026 mask app. All rights reserved.</div>
+        <div class="footer-links">
+          <a href="/privacy-en.html">개인정보처리방침</a>
+          <a href="https://x.com/" target="_blank" rel="noreferrer">Twitter / X</a>
+          <a href="mailto:hello@mask-app.com">문의하기</a>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if(entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      }, { threshold: 0.1 });
+
+      document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+  </body>
+</html>

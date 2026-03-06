@@ -78,7 +78,7 @@
 
     <!-- The Mask (Overlapping top right, rotated) - no border now -->
     <g transform="translate(0, 0)">
-        <!-- Drop Shadow group for mask -->
+        <!-- Drop Shadow group for Mask -->
         <g filter="url(#dropShadow)">
             <!-- Rotated Mask Rectangle (no stroke) -->
             <g transform="translate(494.0, 110.0) rotate(15)">
@@ -86,13 +86,13 @@
             </g>
         </g>
         
-        <!-- 为 mask 内部蓝色横条创建缩小的裁剪区域，使其与 mask 边框保持距离 -->
+        <!-- 为 Mask 内部蓝色横条创建缩小的裁剪区域，使其与 Mask 边框保持距离 -->
         <clipPath id="maskInnerClip">
             <!-- 向内缩进 30px，宽度和高度相应减少，保持相同圆角和变换 -->
             <rect x="30" y="30" width="400" height="540" rx="60" transform="translate(494.0, 110.0) rotate(15)" />
         </clipPath>
         
-        <!-- Translated Text Lines only visible inside the inner mask area, clipped to create whitespace -->
+        <!-- Translated Text Lines only visible inside the inner Mask area, clipped to create whitespace -->
         <g clip-path="url(#maskInnerClip)">
             <!-- Text Line 1 (same positions as base lines) -->
             <rect x="290.0" y="310.0" width="444.0" height="32" rx="16" fill="#00D4FF"/>

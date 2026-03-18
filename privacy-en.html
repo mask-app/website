@@ -4,26 +4,170 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Mask Privacy Policy</title>
-    <meta name="description" content="Mask privacy policy and data handling details." />
+    <meta
+      name="description"
+      content="Mask Privacy Policy: local storage, third-party model providers, data usage, and user rights."
+    />
     <link rel="stylesheet" href="/styles.css" />
+    <style>
+      .policy-page {
+        width: min(980px, 92vw);
+        margin: 40px auto 72px;
+        padding: 28px;
+        border: 1px solid var(--border-light);
+        border-radius: 20px;
+        background: rgba(15, 23, 42, 0.68);
+        backdrop-filter: blur(12px);
+        box-shadow: var(--shadow-lg);
+      }
+      .policy-page h1 {
+        font-size: clamp(2rem, 4vw, 2.7rem);
+        margin-bottom: 10px;
+      }
+      .policy-page h2 {
+        font-size: 1.32rem;
+        margin-top: 28px;
+        margin-bottom: 10px;
+      }
+      .policy-page p,
+      .policy-page li {
+        color: #d7deed;
+      }
+      .policy-page ul {
+        margin: 8px 0 0 18px;
+      }
+      .policy-meta {
+        margin-bottom: 20px;
+        color: var(--text-muted);
+        font-size: 0.95rem;
+      }
+      .lang-switch {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 18px;
+        font-size: 0.92rem;
+      }
+      .lang-switch a,
+      .lang-switch span {
+        padding: 4px 10px;
+        border: 1px solid var(--border);
+        border-radius: 14px;
+        color: var(--text-main);
+        text-decoration: none;
+      }
+      .lang-switch span {
+        background: rgba(255, 255, 255, 0.08);
+      }
+      .policy-note {
+        margin-top: 16px;
+        padding: 12px 14px;
+        border-left: 3px solid var(--accent-cyan);
+        background: rgba(0, 212, 255, 0.08);
+        border-radius: 8px;
+      }
+      .policy-footer {
+        margin-top: 32px;
+        padding-top: 14px;
+        border-top: 1px dashed var(--border-light);
+        color: var(--text-muted);
+      }
+      .policy-footer a,
+      .policy-page a {
+        color: #7dd3fc;
+      }
+    </style>
   </head>
   <body>
-    <main style="width:min(920px,92vw);margin:48px auto;">
-      <div class="lang-switch" style="margin-bottom:20px;">
-        <a href="/privacy.html" hreflang="zh-CN">ZH</a>
-        <span>EN</span>
+    <main class="policy-page">
+      <div class="lang-switch" aria-label="Language Switch">
+        <a href="/privacy.html" hreflang="zh-CN">中文</a>
+        <span>English</span>
       </div>
+
       <h1>Mask Privacy Policy</h1>
-      <p>Effective date: 2026-03-06</p>
-      <h2>1. Data Processing Principle</h2>
-      <p>Mask is local-first. OCR and core visual understanding run on your device by default, and raw images are not uploaded.</p>
-      <h2>2. Data That May Be Sent</h2>
-      <p>If you manually choose a cloud translation provider, required text requests are sent to the third-party API you configured. You can switch to local mode anytime.</p>
-      <h2>3. Credential Storage</h2>
-      <p>API keys should be stored in secure system storage (for example Keychain), not plain-text files.</p>
-      <h2>4. Contact</h2>
-      <p>For privacy questions: <a href="mailto:hello@mask-app.com">hello@mask-app.com</a></p>
-      <p><a href="/en.html">Back to Home</a></p>
+      <p class="policy-meta">Effective date: 2026-03-18 | Applies to: Mask website and app</p>
+
+      <p>
+        This Privacy Policy explains how Mask ("the App") handles data when you use our products. By using the App, you acknowledge that you have read and understood this policy.
+      </p>
+
+      <h2>1. Information We Process</h2>
+      <p>Mask is designed as a local-first app. By default, the following data is stored locally on your own device:</p>
+      <ul>
+        <li>API keys you manually configure (stored via local secure storage)</li>
+        <li>Conversation history, translation history, and settings</li>
+        <li>Runtime logs and diagnostics used for local troubleshooting</li>
+      </ul>
+
+      <h2>2. Data We Do Not Retain</h2>
+      <p>
+        Mask servers do not retain your API keys, conversation history, raw screenshots, or translation text. Unless you explicitly send requests to third-party services, such data is not uploaded for persistent storage on Mask servers.
+      </p>
+
+      <h2>3. Third-Party Model Providers and Liability Boundary</h2>
+      <p>
+        When you use model services such as OpenAI, Google Gemini, DeepSeek, Xiaomi Mimo, or Ollama (remote deployment), relevant requests are sent to the provider you selected or configured.
+      </p>
+      <ul>
+        <li>Each provider is solely responsible for its own data handling and compliance obligations.</li>
+        <li>Privacy policies for those model services are defined and maintained by the respective providers.</li>
+        <li>Mask cannot control how third-party providers store, analyze, or further process submitted content.</li>
+      </ul>
+      <p class="policy-note">
+        Important: You should review and accept each provider's privacy policy and terms before use. Mask is not responsible for the data processing practices of third-party model providers.
+      </p>
+
+      <h2>4. Purposes of Processing</h2>
+      <p>We process data only as needed for product functionality and reliability, including:</p>
+      <ul>
+        <li>Running OCR, translation, and context-related processing</li>
+        <li>Saving your local preferences and session state</li>
+        <li>Diagnosing client-side issues and improving user experience</li>
+      </ul>
+
+      <h2>5. Storage and Retention</h2>
+      <ul>
+        <li>Local data remains under your control and can be deleted at any time.</li>
+        <li>If you uninstall the app or clear local storage, related data is removed from your device (subject to your system behavior).</li>
+        <li>Mask does not maintain centralized cloud archives of user conversations or translations.</li>
+      </ul>
+
+      <h2>6. Data Security</h2>
+      <p>
+        We use reasonable safeguards, including secure local storage patterns, minimized upload strategy, and access controls. However, no system can guarantee absolute security.
+      </p>
+
+      <h2>7. Your Choices</h2>
+      <ul>
+        <li>You may review, modify, or delete locally stored settings and history.</li>
+        <li>You may rotate, revoke, or disable third-party API keys at any time.</li>
+        <li>You may stop using the App and remove local data from your device.</li>
+      </ul>
+
+      <h2>8. Children</h2>
+      <p>
+        The App is not directed to children under 13 (or the minimum legal age in your jurisdiction). If you are a parent or guardian and believe data was processed inappropriately, contact us.
+      </p>
+
+      <h2>9. Policy Updates</h2>
+      <p>
+        We may update this policy to reflect product or compliance changes. Updated versions will be posted on the website or in-app, and material changes will receive prominent notice.
+      </p>
+
+      <h2>10. Contact</h2>
+      <p>
+        For privacy-related questions, contact:
+        <a href="mailto:hello@mask-app.com">hello@mask-app.com</a>
+      </p>
+
+      <div class="policy-footer">
+        <p>
+          Related pages:
+          <a href="/en.html">Back to Home</a>
+          ·
+          <a href="/privacy.html" hreflang="zh-CN">中文版本</a>
+        </p>
+      </div>
     </main>
   </body>
 </html>

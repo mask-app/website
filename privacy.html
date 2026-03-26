@@ -6,159 +6,102 @@
     <title>Mask 隐私政策</title>
     <meta name="description" content="Mask 隐私政策：本地数据存储、第三方模型服务与用户权利说明。" />
     <link rel="stylesheet" href="/styles.css" />
-    <style>
-      .policy-page {
-        width: min(980px, 92vw);
-        margin: 40px auto 72px;
-        padding: 28px;
-        border: 1px solid var(--border-light);
-        border-radius: 20px;
-        background: rgba(15, 23, 42, 0.68);
-        backdrop-filter: blur(12px);
-        box-shadow: var(--shadow-lg);
-      }
-      .policy-page h1 {
-        font-size: clamp(2rem, 4vw, 2.7rem);
-        margin-bottom: 10px;
-      }
-      .policy-page h2 {
-        font-size: 1.32rem;
-        margin-top: 28px;
-        margin-bottom: 10px;
-      }
-      .policy-page p,
-      .policy-page li {
-        color: #d7deed;
-      }
-      .policy-page ul {
-        margin: 8px 0 0 18px;
-      }
-      .policy-meta {
-        margin-bottom: 20px;
-        color: var(--text-muted);
-        font-size: 0.95rem;
-      }
-      .lang-switch {
-        display: flex;
-        gap: 10px;
-        margin-bottom: 18px;
-        font-size: 0.92rem;
-      }
-      .lang-switch a,
-      .lang-switch span {
-        padding: 4px 10px;
-        border: 1px solid var(--border);
-        border-radius: 14px;
-        color: var(--text-main);
-        text-decoration: none;
-      }
-      .lang-switch span {
-        background: rgba(255, 255, 255, 0.08);
-      }
-      .policy-note {
-        margin-top: 16px;
-        padding: 12px 14px;
-        border-left: 3px solid var(--accent-cyan);
-        background: rgba(0, 212, 255, 0.08);
-        border-radius: 8px;
-      }
-      .policy-footer {
-        margin-top: 32px;
-        padding-top: 14px;
-        border-top: 1px dashed var(--border-light);
-        color: var(--text-muted);
-      }
-      .policy-footer a,
-      .policy-page a {
-        color: #7dd3fc;
-      }
-    </style>
   </head>
-  <body>
-    <main class="policy-page">
-      <div class="lang-switch" aria-label="Language Switch">
-        <span>中文</span>
-        <a href="/privacy-en.html" hreflang="en">English</a>
+  <body class="policy-body">
+    <header class="policy-header">
+      <div class="policy-header-inner">
+        <a class="policy-brand" href="/">Mask</a>
+        <nav class="policy-lang-switch" aria-label="Language Switch">
+          <span class="is-active">中文</span>
+          <a href="/privacy-en.html" hreflang="en">English</a>
+        </nav>
       </div>
+    </header>
 
-      <h1>Mask 隐私政策</h1>
-      <p class="policy-meta">生效日期：2026-03-18 ｜ 适用网站与客户端产品：Mask</p>
+    <main class="policy-main">
+      <article class="policy-article">
+        <section class="policy-document-header">
+          <p class="policy-eyebrow">Mask</p>
+          <h1>隐私政策</h1>
+          <p class="policy-meta">生效日期：2026-03-18 ｜ 适用网站与客户端产品：Mask</p>
+          <p class="policy-lead">
+            本隐私政策说明 Mask（以下简称“本应用”）如何收集、使用、存储与保护你的信息。你使用本应用，即表示你已阅读并理解本政策。
+          </p>
+        </section>
 
-      <p>
-        本隐私政策说明 Mask（以下简称“本应用”）如何收集、使用、存储与保护你的信息。你使用本应用，即表示你已阅读并理解本政策。
-      </p>
+        <h2>1. 我们处理的信息范围</h2>
+        <p>本应用采用“本地优先”设计。默认情况下，以下信息会保存在你的设备本地：</p>
+        <ul>
+          <li>你手动配置的 API Key（本地安全存储）</li>
+          <li>对话历史、翻译记录、设置项等本地使用数据</li>
+          <li>运行日志与错误信息（用于本地排查）</li>
+        </ul>
 
-      <h2>1. 我们处理的信息范围</h2>
-      <p>本应用采用“本地优先”设计。默认情况下，以下信息会保存在你的设备本地：</p>
-      <ul>
-        <li>你手动配置的 API Key（本地安全存储）</li>
-        <li>对话历史、翻译记录、设置项等本地使用数据</li>
-        <li>运行日志与错误信息（用于本地排查）</li>
-      </ul>
-
-      <h2>2. 我们不会保留的内容</h2>
-      <p>
-        Mask 服务端不保存你的 API Key、对话历史、原始截图或翻译文本内容。除你主动发起网络请求外，本应用不会将前述数据上传到 Mask 服务端持久化存储。
-      </p>
-
-      <h2>3. 第三方模型服务与责任边界</h2>
-      <p>
-        当你使用 OpenAI、Google Gemini、DeepSeek、Xiaomi Mimo、Ollama（远程部署）等模型能力时，相关请求将发送至你所选择或配置的第三方服务商。
-      </p>
-      <ul>
-        <li>第三方服务商对其数据处理规则、日志保留策略和合规义务负责。</li>
-        <li>各模型服务的隐私政策由其服务商单独制定并更新。</li>
-        <li>本应用无法控制第三方服务商如何存储、分析或二次处理你发送的数据。</li>
-      </ul>
-      <p class="policy-note">
-        重要说明：你应在使用前自行阅读并接受相应模型服务商的隐私政策与服务条款。本应用不对第三方模型服务商的数据处理行为承担责任。
-      </p>
-
-      <h2>4. 数据用途</h2>
-      <p>我们仅在实现产品功能与稳定性所必需的范围内处理信息，主要用于：</p>
-      <ul>
-        <li>执行 OCR、翻译与上下文处理</li>
-        <li>保存你的本地偏好配置与会话状态</li>
-        <li>定位客户端错误并改进产品体验</li>
-      </ul>
-
-      <h2>5. 数据存储与保留</h2>
-      <ul>
-        <li>本地数据由你自行控制，可随时删除或重置。</li>
-        <li>你卸载应用或清理本地数据后，相关信息将从设备移除（以你的系统行为为准）。</li>
-        <li>本应用不建立用户云端数据档案，不提供中心化历史数据托管。</li>
-      </ul>
-
-      <h2>6. 数据安全</h2>
-      <p>我们采取合理安全措施保护数据，包括本地安全存储机制、最小化上传策略与权限控制。但请理解，任何系统都无法保证绝对安全。</p>
-
-      <h2>7. 你的权利与选择</h2>
-      <ul>
-        <li>你可以在本地查看、修改或删除已保存的配置和历史记录。</li>
-        <li>你可以更换、停用或撤销第三方 API Key。</li>
-        <li>你可以停止使用本应用并删除本地数据。</li>
-      </ul>
-
-      <h2>8. 未成年人</h2>
-      <p>本应用不面向未满 13 周岁（或你所在法域最低法定年龄）的未成年人提供定向服务。若你是监护人并发现相关信息处理问题，请联系我们。</p>
-
-      <h2>9. 政策更新</h2>
-      <p>我们可能根据产品与合规要求更新本政策。更新后将通过网站或应用内方式公告，重大变更会给出显著提示。</p>
-
-      <h2>10. 联系我们</h2>
-      <p>
-        隐私相关问题可通过以下方式联系：
-        <a href="mailto:hello@mask-app.com">hello@mask-app.com</a>
-      </p>
-
-      <div class="policy-footer">
+        <h2>2. 我们不会保留的内容</h2>
         <p>
-          相关页面：
-          <a href="/">返回首页</a>
-          ·
-          <a href="/privacy-en.html" hreflang="en">English Version</a>
+          Mask 服务端不保存你的 API Key、对话历史、原始截图或翻译文本内容。除你主动发起网络请求外，本应用不会将前述数据上传到 Mask 服务端持久化存储。
         </p>
-      </div>
+
+        <h2>3. 第三方模型服务与责任边界</h2>
+        <p>
+          当你使用 OpenAI、Google Gemini、DeepSeek、Xiaomi Mimo、Ollama（远程部署）等模型能力时，相关请求将发送至你所选择或配置的第三方服务商。
+        </p>
+        <ul>
+          <li>第三方服务商对其数据处理规则、日志保留策略和合规义务负责。</li>
+          <li>各模型服务的隐私政策由其服务商单独制定并更新。</li>
+          <li>本应用无法控制第三方服务商如何存储、分析或二次处理你发送的数据。</li>
+        </ul>
+        <p class="policy-note">
+          重要说明：你应在使用前自行阅读并接受相应模型服务商的隐私政策与服务条款。本应用不对第三方模型服务商的数据处理行为承担责任。
+        </p>
+
+        <h2>4. 数据用途</h2>
+        <p>我们仅在实现产品功能与稳定性所必需的范围内处理信息，主要用于：</p>
+        <ul>
+          <li>执行 OCR、翻译与上下文处理</li>
+          <li>保存你的本地偏好配置与会话状态</li>
+          <li>定位客户端错误并改进产品体验</li>
+        </ul>
+
+        <h2>5. 数据存储与保留</h2>
+        <ul>
+          <li>本地数据由你自行控制，可随时删除或重置。</li>
+          <li>你卸载应用或清理本地数据后，相关信息将从设备移除（以你的系统行为为准）。</li>
+          <li>本应用不建立用户云端数据档案，不提供中心化历史数据托管。</li>
+        </ul>
+
+        <h2>6. 数据安全</h2>
+        <p>我们采取合理安全措施保护数据，包括本地安全存储机制、最小化上传策略与权限控制。但请理解，任何系统都无法保证绝对安全。</p>
+
+        <h2>7. 你的权利与选择</h2>
+        <ul>
+          <li>你可以在本地查看、修改或删除已保存的配置和历史记录。</li>
+          <li>你可以更换、停用或撤销第三方 API Key。</li>
+          <li>你可以停止使用本应用并删除本地数据。</li>
+        </ul>
+
+        <h2>8. 未成年人</h2>
+        <p>本应用不面向未满 13 周岁（或你所在法域最低法定年龄）的未成年人提供定向服务。若你是监护人并发现相关信息处理问题，请联系我们。</p>
+
+        <h2>9. 政策更新</h2>
+        <p>我们可能根据产品与合规要求更新本政策。更新后将通过网站或应用内方式公告，重大变更会给出显著提示。</p>
+
+        <h2>10. 联系我们</h2>
+        <p>
+          隐私相关问题可通过以下方式联系：
+          <a href="mailto:hello@mask-app.com">hello@mask-app.com</a>
+        </p>
+      </article>
     </main>
+
+    <footer class="policy-footer">
+      <div class="policy-footer-inner">
+        <p>相关页面</p>
+        <div class="policy-footer-links">
+          <a href="/">返回首页</a>
+          <a href="/privacy-en.html" hreflang="en">English Version</a>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
